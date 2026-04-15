@@ -1,17 +1,7 @@
 name: Feature Request
-description: Suggest an enhancement for OBI or k8s-cache
+description: Suggest an enhancement
 labels: ["enhancement", "needs triage"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for suggesting a feature. Please fill out the fields below.
-  - type: checkboxes
-    attributes:
-      label: Prerequisites
-      options:
-        - label: I have searched existing issues for duplicates.
-          required: true
   - type: dropdown
     id: component
     attributes:
@@ -21,7 +11,7 @@ body:
         - OBI (eBPF instrumentation)
         - k8s-cache
         - Both / unsure
-    validations:
+    validations:s
       required: true
   - type: textarea
     id: problem
