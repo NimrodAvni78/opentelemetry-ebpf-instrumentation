@@ -1,0 +1,9 @@
+# Regex patterns matching the rendered form output of .github/ISSUE_TEMPLATE/*.yaml
+# The Component dropdown renders as "### Component" followed by the selected value.
+# Selecting "Both / unsure" applies both component labels.
+"component:obi":
+  - '### Component[^\S\n]*\n+[^\S\n]*OBI \(eBPF instrumentation\)'
+  - '### Component[^\S\n]*\n+[^\S\n]*Both / unsure'
+"component:k8s-cache":
+  - '### Component[^\S\n]*\n+[^\S\n]*k8s-cache'
+  - '### Component[^\S\n]*\n+[^\S\n]*Both / unsure'
