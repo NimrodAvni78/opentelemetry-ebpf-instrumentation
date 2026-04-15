@@ -11,7 +11,7 @@ body:
         - OBI (eBPF instrumentation)
         - k8s-cache
         - Both / unsure
-    validations:s
+    validations:
       required: true
   - type: textarea
     id: problem
