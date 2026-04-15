@@ -1,6 +1,6 @@
 name: New Instrumentation Request
 description: Request support for instrumenting a new library, protocol, or runtime
-labels: ["enhancement", "new instrumentation", "needs triage"]
+labels: ["enhancement", "new instrumentation", "needs triage", "component:obi"]
 body:
   - type: checkboxes
     attributes:
