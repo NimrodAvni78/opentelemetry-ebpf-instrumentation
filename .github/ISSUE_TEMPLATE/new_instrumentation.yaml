@@ -2,45 +2,18 @@ name: New Instrumentation Request
 description: Request support for instrumenting a new library, protocol, or runtime
 labels: ["enhancement", "new instrumentation", "needs triage"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ### Before you file
-
-        Please check the following to confirm this instrumentation is not already supported or planned:
-
-        - [`devdocs/features.md`](https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/blob/main/devdocs/features.md)
-        - [`SUPPORT_MATRIX.md`](https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/blob/main/SUPPORT_MATRIX.md)
   - type: checkboxes
     attributes:
       label: Prerequisites
       options:
-        - label: I have checked `devdocs/features.md` and this instrumentation is not already listed.
-          required: true
-        - label: I have searched existing issues for duplicates.
+        - label: I have checked [`devdocs/features.md`](https://github.com/open-telemetry/opentelemetry-ebpf-instrumentation/blob/main/devdocs/features.md) and this instrumentation is not already listed.
           required: true
   - type: input
     id: library
     attributes:
       label: Library / protocol / runtime
       description: What would you like OBI to instrument?
-      placeholder: e.g. NATS client, QUIC, Deno runtime
-    validations:
-      required: true
-  - type: dropdown
-    id: language
-    attributes:
-      label: Language / runtime
-      options:
-        - Go
-        - Node.js
-        - Python
-        - Java / JVM
-        - Ruby
-        - Rust
-        - C/C++
-        - Multiple / cross-language
-        - Other
+      placeholder: e.g. AMQP, ClickHouse, Rust Tokio
     validations:
       required: true
   - type: input
@@ -48,6 +21,14 @@ body:
     attributes:
       label: Reference documentation
       description: Link to the library homepage, protocol spec, or relevant docs.
+  - type: input
+    id: semconv
+    attributes:
+      label: OTel semantic conventions
+      description: |
+        Link to the relevant section of the [OpenTelemetry Semantic Conventions](https://github.com/open-telemetry/semantic-conventions),
+        if one exists for this library / protocol. Leave blank if there is no defined semconv yet.
+      placeholder: e.g. https://opentelemetry.io/docs/specs/semconv/database/mongodb/
   - type: checkboxes
     id: signals
     attributes:
@@ -55,7 +36,6 @@ body:
       options:
         - label: Traces
         - label: Metrics
-        - label: Logs
   - type: textarea
     id: use-case
     attributes:
