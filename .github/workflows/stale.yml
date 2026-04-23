@@ -23,13 +23,13 @@ jobs:
           exempt-issue-labels: 'never stale,pinned,help wanted,good first issue'
           exempt-pr-labels: 'never stale,blocked'
           stale-issue-message: |
-            This issue has been inactive for 60 days and is now marked as stale.
+            This issue has been inactive for 120 days and is now marked as stale.
 
             cc @open-telemetry/ebpf-instrumentation-maintainers — please review and close if no longer relevant.
 
             A comment from anyone or the `never stale` label will remove the stale marker.
           stale-pr-message: |
-            This PR has been inactive for 30 days and is now marked as stale.
+            This PR has been inactive for 60 days and is now marked as stale.
 
             cc @open-telemetry/ebpf-instrumentation-maintainers — please review and close if no longer being worked on.
 
