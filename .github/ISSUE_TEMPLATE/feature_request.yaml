@@ -10,7 +10,7 @@ body:
       options:
         - OBI (eBPF instrumentation)
         - k8s-cache
-        - Both / unsure
+        - Other
     validations:
       required: true
   - type: textarea
